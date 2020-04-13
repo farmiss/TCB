@@ -1,6 +1,5 @@
 from discord import Webhook, RequestsWebhookAdapter, Embed, Color
 import datetime
-import Color
 
 def avatar_url():
     return 'https://cdn.discordapp.com/avatars/597984411694399490/b63669f142e713de30f1f5f48b33502d.webp?size=128'
