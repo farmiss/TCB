@@ -57,12 +57,16 @@ def send_webhook(bot):
     elif bot == 'balko':
         send_balko(webhook)
 
+
 if __name__ == '__main__':
     while True:
-        bot = input('Which Bot? (Please select from Cyber, Kodai, Balko)\n').lower()
-        if bot in ['cyber', 'kodai', 'balko']:
-            break
+        bot = input('Which Bot? (Please select from Cyber, Kodai, Balko)\n')
+        if bot.lower() in ['cyber', 'kodai', 'balko']:
+            send_webhook(bot.lower())
+            print('{bot} webhook successfully sent'.format(bot=bot))
+            if input('Try again? Y/N \n').lower() == 'n':
+                break
         else:
             print('Unsupported bot selected! Only supports Cyber, Kodai, Balko')
-    send_webhook(bot)
+
 
