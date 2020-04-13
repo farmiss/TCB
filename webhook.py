@@ -5,7 +5,8 @@ def avatar_url():
     return 'https://cdn.discordapp.com/avatars/597984411694399490/b63669f142e713de30f1f5f48b33502d.webp?size=128'
 
 def send_webhook():
-    url = 'https://ptb.discordapp.com/api/webhooks/699263716859969586/o1YEjsT2aQtgG0NGgfHgaVxTkL9sVttTYLBKJ_hQt9ey5NSTRVnu0yrggHOK2YdpMN8q'
+    #url = 'https://ptb.discordapp.com/api/webhooks/699263716859969586/o1YEjsT2aQtgG0NGgfHgaVxTkL9sVttTYLBKJ_hQt9ey5NSTRVnu0yrggHOK2YdpMN8q'
+    url = 'https://discordapp.com/api/webhooks/699310644175831150/pbSn_8su8B9heSkl3_a7dYVJ0M7g3pu9I8RolgITtyig5p8ALrIE4NnZ51z5bQ5J_nSU'
     webhook = Webhook.from_url(url, adapter=RequestsWebhookAdapter())
     embed = Embed(title='Successfully checked out!',description='Motion Logo Beanie')
     embed.add_field(name='Store', value='Supreme US', inline=True)
