@@ -8,7 +8,7 @@ def send_webhook():
     #url = 'https://ptb.discordapp.com/api/webhooks/699263716859969586/o1YEjsT2aQtgG0NGgfHgaVxTkL9sVttTYLBKJ_hQt9ey5NSTRVnu0yrggHOK2YdpMN8q'
     url = 'https://discordapp.com/api/webhooks/699310644175831150/pbSn_8su8B9heSkl3_a7dYVJ0M7g3pu9I8RolgITtyig5p8ALrIE4NnZ51z5bQ5J_nSU'
     webhook = Webhook.from_url(url, adapter=RequestsWebhookAdapter())
-    embed = Embed(title='Successfully checked out!',description='Motion Logo Beanie')
+    embed = Embed(title='Successfully checked out!',description='Motion Logo Beanie', color=65365)
     embed.add_field(name='Store', value='Supreme US', inline=True)
     embed.add_field(name='Size', value='N/A', inline=True)
     embed.add_field(name='Profile', value='||Test US||', inline=True)
@@ -18,10 +18,9 @@ def send_webhook():
     embed.add_field(name='Color', value='black', inline=True)
     embed.add_field(name='Quantity', value='1', inline=True)
     embed.add_field(name='Captcha Bypass', value='Enabled', inline=True)
-    embed.add_field(name='Mode', value='safe', inline=True)
-    embed.set_footer(text='CyberAIO', icon_url='https://images-ext-2.discordapp.net/external/AFl8btw6-OdaFIC4DU6c8as5gTG8SIVdsOx_hLOXnEs/https/cdn.cybersole.io/media/discord-logo.png')
+    embed.add_field(name='Mode', value='Safe', inline=True)
+    embed.set_footer(text='CyberAIO • ' + datetime.datetime.now().strftime('%m/%d/%Y %I:%M:%S.%f')[:-3], icon_url='https://images-ext-2.discordapp.net/external/AFl8btw6-OdaFIC4DU6c8as5gTG8SIVdsOx_hLOXnEs/https/cdn.cybersole.io/media/discord-logo.png')
     embed.set_thumbnail(url='https://images-ext-2.discordapp.net/external/th0cNlyGulQ8O3T4TiSv9gXrNe7Rah4bvj0kdS43zCY/https/assets.supremenewyork.com/186430/rs/JS7Ta8AUyo4.jpg?width=80&height=80')
-    embed.timestamp = datetime.datetime.now()
 
     webhook.send(embed=embed, avatar_url=avatar_url(), username='CyberAIO')
 send_webhook()
