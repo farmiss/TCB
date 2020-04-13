@@ -19,9 +19,9 @@ def send_webhook():
     embed.add_field(name='Quantity', value='1', inline=True)
     embed.add_field(name='Captcha Bypass', value='Enabled', inline=True)
     embed.add_field(name='Mode', value='safe', inline=True)
-    embed.set_author(name='', icon_url='https://images-ext-2.discordapp.net/external/th0cNlyGulQ8O3T4TiSv9gXrNe7Rah4bvj0kdS43zCY/https/assets.supremenewyork.com/186430/rs/JS7Ta8AUyo4.jpg?width=80&height=80')
+    embed.set_footer(text='CyberAIO', icon_url='https://images-ext-2.discordapp.net/external/AFl8btw6-OdaFIC4DU6c8as5gTG8SIVdsOx_hLOXnEs/https/cdn.cybersole.io/media/discord-logo.png')
     embed.set_thumbnail(url='https://images-ext-2.discordapp.net/external/th0cNlyGulQ8O3T4TiSv9gXrNe7Rah4bvj0kdS43zCY/https/assets.supremenewyork.com/186430/rs/JS7Ta8AUyo4.jpg?width=80&height=80')
-    embed.timestamp = datetime.datetime.now().strftime('%d/%m/%Y %I:%M:%S%p')
+    embed.timestamp = datetime.datetime.now()
 
-    webhook.send(embed=embed,avatar_url=avatar_url())
+    webhook.send(embed=embed, avatar_url=avatar_url(), username='CyberAIO')
 send_webhook()
